@@ -1,0 +1,31 @@
+<h1>ADD A NEW TRACK</h1>
+
+<% if @track && @track.errors.any? %>
+<div class="errors">
+  <strong>There are errors with your entry:</strong>
+  <ul>
+    <% @track.errors.full_messages.each do |track| %>
+    <li><%= track %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<form class="newTrack" action="/new" method="post">
+  <div>
+    <label>Track:</label>
+    <input type="text" name="title" value="<%= @track && @track.title %>">
+  </div>
+  <div>
+    <label>Artist:</label>
+    <input type="text" name="artist" value="<%= @track && @track.artist %>">
+  </div>
+  <div>
+    <label>Url:</label>
+    <input type="text" name="url" value="<%= @track && @track.url %>">
+    <label><small>optional</small></label>
+  </div>
+  <div>
+    <input type="submit" name="Submit">
+  </div>
+</form>
