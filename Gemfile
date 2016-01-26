@@ -2,6 +2,7 @@
 source "https://rubygems.org"
 
 gem 'rake'
+gem 'railties'
 gem 'activesupport'
 
 gem 'sinatra'
@@ -15,4 +16,5 @@ group :development, :test do
   gem 'pry'
   gem 'shotgun'
   gem 'sqlite3'
+  gem 'pry-rails'
 end

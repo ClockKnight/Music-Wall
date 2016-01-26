@@ -1,1 +1,7 @@
-<h1>Home Page</h1>
+<h1>Music Wall</h1>
+<% @tracks.each do |track| %>
+  <div class="track">
+    <h3><%= track.title %></h3>
+    <p><%= track.artist %></p>
+  </div>
+<% end %>
