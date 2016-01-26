@@ -1,8 +1,14 @@
 <h1>Music Wall</h1>
-<% @tracks.each do |track| %>
-  <div class="track">
-    <h3><%= track.title %></h3>
-    <p><%= track.artist %></p>
-  </div>
-<% end %>
+
+<div class="row">
+  <% @tracks.each do |track| %>
+    <div class='track col-xs-12 col-sm-4 col-md-3 col-lg-3'>
+    <div class='panel panel-warning'>
+      <div class='panel-heading'><%= track.title %></div>
+      <div class='panel-body'><%= track.artist %></div>
+    </div>
+    </div>
+  <% end %>
+</div>
+
 <a href="/new">Add a new track</a>
